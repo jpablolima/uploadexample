@@ -9,7 +9,7 @@ const app = express();
 */
 
 mongoose.connect(
-    "mongodb://localhost:2701/upload",
+    "mongodb://localhost:27017/upload",
     {
         useNewUrlParser: true
     }
