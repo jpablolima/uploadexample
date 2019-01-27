@@ -1,0 +1,17 @@
+Criar na pasta arquivo .env na pasta backend
+
+
+
+########################################################################
+APP_URL=http://localhost:3000
+
+MONGO_URL=mongodb://localhost:27017/upload
+
+STORAGE_TYPE=local
+
+
+
+AWS_ACCESS_KEY_ID = AKIAIPVERN7RPKEHEPWA
+AWS_SECRET_ACCESS_KEY = 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
+AWS_DEFAULT_REGION=us-east-1
+########################################################################
