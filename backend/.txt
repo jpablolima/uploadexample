@@ -1,6 +1,4 @@
-Criar na pasta arquivo .env na pasta backend
-
-
+Criar na pasta backend arquivo .env 
 
 ########################################################################
 APP_URL=http://localhost:3000
