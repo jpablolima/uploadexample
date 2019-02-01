@@ -37,10 +37,12 @@ class App extends Component {
     };
 
     updateFile = ( id, data) => {
-      this.setState({ uploadedFiles: this.state.uploadedFiles.map(uploadedFile =>
-        
+      this.setState({ uploadedFiles: this.state.uploadedFiles.map(uploadedFile => 
+        {
+        return id === uploadedFile.id ? 
+        { ...uploadedFile, ...data } : uploadedFile;
     
-        )}
+      })
         })
 
     }
