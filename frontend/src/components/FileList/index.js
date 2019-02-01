@@ -1,6 +1,6 @@
 import React from 'react';
 import CircularProgressbar from 'react-circular-progressbar';
-import { MdCheckCircle, MdEror, MdLink} from 'react-icons/md';
+import { MdCheckCircle, MdError, MdLink} from 'react-icons/md';
 
 
 import { Container, FileInfo, Preview } from './styles';
@@ -12,10 +12,10 @@ const FileList = () => (
         <li>
             <FileInfo>
 
-                <Preview src ="http://localhost:3000/files/7e6ef1ef55a7701b8182053ff99c9df6-alex-knight-326705-unsplash.jpg"/>
+                <Preview src ="http://localhost:3000/files/a95226b517af39a1c9115fd65e8641f1-images.jpg"/>
                 <div>
                     <strong>profile.png</strong>
-                    <span>64kb <button> onClik={() =>{}}>Excluir</button></span>
+                    <span>64kb <button onClik={() =>{}}>Excluir</button></span>
 
                 </div>
             </FileInfo>
@@ -31,14 +31,14 @@ const FileList = () => (
                     />
 
                 <a 
-                    href="http://localhost:3000/files/7e6ef1ef55a7701b8182053ff99c9df6-alex-knight-326705-unsplash.jpg"
+                    href="http://localhost:3000/files/a95226b517af39a1c9115fd65e8641f1-images.jpg"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     <MdLink style={{ marginRight: 8}} size={24} color="#222"/>
                 </a>
                     <MdCheckCircle size={24} color="#78e5d5" />
-                    <MdEror size={24} color="e57878" />
+                    <MdError size={24} color="e57878" />
                 </div>
 
         </li>
