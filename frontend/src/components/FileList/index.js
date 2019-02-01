@@ -11,8 +11,7 @@ const FileList = ({ files }) => (
     <Container>
 
     { files.map(uploadedFile => (
-        
-        <li>
+        <li key={uploadedFile.id}>
             <FileInfo>
                 <Preview src = {uploadedFile.preview} />
                 <div>

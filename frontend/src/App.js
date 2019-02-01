@@ -48,7 +48,7 @@ class App extends Component {
     }
       processUpload = (uploadedFile)  => {
         const data = new FormData();
-        data.append('File', uploadedFile.file, uploadedFile.name);
+        data.append('file', uploadedFile.file, uploadedFile.name);
 
       api.post('/posts', data, {
         onUploadProgress: e => {
