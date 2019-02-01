@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import  { uniqueId } from "lodash";
 import filesize from "filesize";
+import api from  "./services/api";
+
 
 import GlobalStyle from "./styles/global";
 import { Container, Content   } from "./styles";
@@ -29,13 +31,39 @@ class App extends Component {
       this.setState({
         uploadedFiles: this.state.uploadedFiles.concat(uploadedFiles)
       });      
-  };
+  
+      uploadedFiles.forEach(this.processUpload);
+  
+    };
 
+    updateFile = ( id, data) => {
+      this.setState({ uploadedFiles: this.state.uploadedFiles.map(uploadedFile =>
+        
+    
+        )}
+        })
+
+    }
+      processUpload = (uploadedFile)  => {
+        const data = new FormData();
+        data.append('File', uploadedFile.file, uploadedFile.name);
+
+      api.post('/posts', data, {
+        onUploadProgress: e => {
+          const progress = parseInt(Math.round((e.loaded *100) / e.total));
+       
+          this.updateFile(uploadedFile.id, {
+            progress,
+          })
+        }
+      })        
+      }
 
 
 
   render() {
     const { uploadedFiles } = this.state;
+
 
     return  (
       <Container>
