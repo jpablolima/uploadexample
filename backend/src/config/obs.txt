@@ -1,0 +1,7 @@
+Se apresentar o error 
+[nodemon] Internal watch failed: watch /home/pablo/Documentos/vm/uploadexample/backend/src/config/multer.js ENOSPC
+error Command failed with exit code 1.
+
+Execute o comando  (Linux)
+
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
