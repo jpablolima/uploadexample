@@ -16,7 +16,7 @@ const FileList = ({ files }) => (
             <FileInfo>
                 <Preview src = {uploadedFile.preview} />
                 <div>
-                    <strong>uploadedFile.name</strong>
+                    <strong>{uploadedFile.name}</strong>
                     <span>
                         {uploadedFile.readableSize} <button onClik={() =>{}}>Excluir</button>
                     </span>
