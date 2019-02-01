@@ -4,6 +4,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "filesize": "^4.0.0",
+    "lodash": "^4.17.11",
     "react": "^16.7.0",
     "react-circular-progressbar": "^1.0.0",
     "react-dom": "^16.7.0",
