@@ -6,7 +6,7 @@ import { MdCheckCircle, MdError, MdLink} from 'react-icons/md';
 import { Container, FileInfo, Preview } from './styles';
 
 
-const FileList = ({ files }) => (
+const FileList = ({ files, onDelete }) => (
 
     <Container>
 
@@ -20,7 +20,7 @@ const FileList = ({ files }) => (
                         {uploadedFile.readableSize}
 
                         { !! uploadedFile.url && (
-                            <button onClick={() => {}}>Excluir</button>
+                            <button onClick={() => onDelete(uploadedFile.id)}>Excluir</button>
                                 
                         )}
                         
@@ -45,7 +45,7 @@ const FileList = ({ files }) => (
                         { uploadedFile.url && (
 
                         <a 
-                            href="http://localhost:3000/files/a95226b517af39a1c9115fd65e8641f1-images.jpg"
+                            href={uploadedFile.url}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
