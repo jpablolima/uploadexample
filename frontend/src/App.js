@@ -29,10 +29,7 @@ class App extends Component {
       }))
     })
   };
-
-
-
-  
+ 
 
   handleUpload = files => {
     const uploadedFiles = files.map(file => ({
